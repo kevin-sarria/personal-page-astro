@@ -1,3 +1,6 @@
+# personal-page-astro
+Pagina personal hecha en Astro
+
 # Astro Starter Kit: Basics
 
 ```sh
