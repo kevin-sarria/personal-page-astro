@@ -1,0 +1,70 @@
+---
+import SectionContainer from "./SectionContainer.astro";
+import SocialPill from "./SocialPill.astro";
+import Badge from "./Badge.astro";
+import Experience from "./experience/Experience.astro";
+
+import LinkedinIcon from "../icons/Linkedin.astro";
+import GithubIcon from "../icons/Github.astro";
+import MailIcon from "../icons/Mail.astro";
+import Briefcase from "../icons/Briefcase.astro";
+import Code from "../icons/Code.astro";
+import Projects from "./Projects.astro";
+---
+
+<main class="max-w-[700px] mx-auto">
+  <SectionContainer id="" class="py-44 pb-0 sm:pb-24">
+
+    <img src="/img/avatar.jpg" alt="Photo Portfolio" class="rounded-full w-12 h-12">
+    <h1 class="text-gray-700 text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-5 pb-4 flex-wrap">
+      Hey, Soy Kevin Sarria 
+        <a
+            href="https://www.linkedin.com/in/kevin-sarria-99534a295/"
+            target="_blank"
+            rel="noopener"
+            class="flex justify-center items-center my-2 sm:my-0"
+        >
+            <Badge>Disponible para Trabajar</Badge>
+        </a>
+    </h1>
+    
+    <h2 class="text-xl lg:text-2xl text-gray-600 text-wrap">
+      <span class="font-medium">+1 año de experiencia.</span> <span class="text-indigo-500">Desarrollador Web Frontend.</span> De San Jose del Guaviare, Colombia.
+      Especializado en crear soluciones eficientes a tus problemas.
+    </h2>
+
+    <nav class="flex flex-row gap-y-5 gap-x-4 my-5 flex-wrap">
+      <SocialPill href="https://www.linkedin.com/in/kevin-sarria">
+        <LinkedinIcon class='size-6 text-gray-800' />
+          Linkedin
+      </SocialPill>
+
+      <SocialPill href="https://github.com/kevin-sarria">
+        <GithubIcon class='size-6 text-gray-800' />
+          Github
+      </SocialPill>
+
+      <SocialPill href="mailto:camilo.bravo.2050@gmail.com">
+        <MailIcon class='size-6 text-gray-800' />
+          camilo.bravo.2050@gmail.com
+      </SocialPill>
+    </nav>
+  </SectionContainer>
+
+  <SectionContainer id="experience">
+    <h2 class="text-2xl font-semibold mb-6 flex gap-x-2 items-center">
+      <Briefcase class="size-7 text-gray-800" />
+      Experiencia Laboral
+    </h2>
+    <Experience />
+  </SectionContainer>
+
+  <SectionContainer id="projects">
+    <h2 class="text-2xl font-semibold mb-6 flex gap-x-2 items-center">
+      <Code class="size-7 text-gray-800" />
+      Proyectos
+    </h2>
+    <Projects />
+  </SectionContainer>
+
+</main>

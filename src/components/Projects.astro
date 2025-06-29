@@ -1,0 +1,48 @@
+---
+const PROJECTS = [
+    {
+        title: "DevWebCamp",
+        description: "Proyecto principal del curso \"Desarrollo Web Completo\" de Juan Pablo de la Torre Valdez. Incluye maquetación CSS, backend, autenticación de usuarios y procesamiento de pagos con la API de PayPal. Uno de los proyectos más completos que he desarrollado, combinando fundamentos frontend con integraciones complejas de backend. Gran experiencia de aprendizaje técnico.",
+        link: "#",
+        github: "#",
+        image: "/img/projects/devwebcamp.webp",
+        tags: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"]
+    },
+    {
+        title: "Maps App",
+        description: "Aplicación web desarrollada con React y TypeScript que integra una API de mapas para visualización interactiva. Implementa funcionalidades básicas de geolocalización con un diseño personalizado mediante CSS. Proyecto que demuestra habilidades en consumo de APIs y desarrollo frontend moderno.",
+        link: "#",
+        github: "#",
+        image: "/img/projects/mapsapp.webp",
+        tags: ["React", "TailwindCSS", "HTML", "CSS", "JavaScript"]
+    },
+    {
+        title: "Ambulancias App",
+        description: "Sistema de gestión para ambulancias del Hospital E.S.E San José del Guaviare. Permite registrar suministros médicos (gastos, cambios y asignaciones a pacientes), gestionar documentos PDF por ambulancia para acceso rápido, administrar usuarios y roles, y mantener un inventario de medicamentos cumpliendo normativas del Invima. Uno de mis primeros proyectos, con impacto en la optimización de procesos hospitalarios.",
+        link: "#",
+        github: "#",
+        image: "/img/projects/ambulanciasapp.webp",
+        tags: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"]
+    }
+]
+---
+
+{
+    PROJECTS.map(  ({ title, description, image, link, github, tags }) => (
+        <article>
+            <h3>{title}</h3>
+            <p>{description}</p>
+            <ul>
+                {
+                    tags.map(tag => (
+                        <li class="inline-block bg-gray-200 text-gray-800 px-2 py-1 rounded-full mr-2 mb-2">
+                            {tag}
+                        </li>
+                    ))
+                }
+            </ul>
+
+            <img src={image} alt={`Captura de pantalla de ${title}`} class="w-full h-auto rounded-lg mb-4" />
+        </article>
+    ))
+}

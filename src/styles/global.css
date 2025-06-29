@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+html {
+    @apply scroll-smooth;
+}
+
+html,
+body {
+	margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: 'Onest Variable', sans-serif;
+    @apply flex flex-col items-center bg-white min-h-dvh h-auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
